@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick+ | Streaming Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="icon" href="./favicon.ico" type="favicon" />
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+              },
+              animation: {
+                'scroll-up': 'scroll-up 30s linear infinite',
+                'scroll-down': 'scroll-down 30s linear infinite',
+              },
+              keyframes: {
+                'scroll-up': {
+                  '0%': { transform: 'translateY(0)' },
+                  '100%': { transform: 'translateY(-50%)' },
+                },
+                'scroll-down': {
+                  '0%': { transform: 'translateY(-50%)' },
+                  '100%': { transform: 'translateY(0)' },
+                }
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+      /* --- NOVA ADIÇÃO: ROLAGEM SUAVE --- */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Importando uma fonte mais moderna (opcional, mas recomendado) */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+      /* Gradiente do texto */
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, #a855f7, #ec4899);
+      }
+
+      /* Máscara para o marquee */
+      .mask-image-gradient {
+          -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-[#0f0a1e] text-slate-100 font-sans overflow-x-hidden selection:bg-purple-500 selection:text-white">
+    <nav class="fixed w-full bg-[#0f0a1e]/90 backdrop-blur-md z-50 border-b border-white/5">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl font-bold tracking-tighter text-white">
+            Quick<span class="text-purple-500">+</span>
+          </span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#" class="text-white hover:text-purple-400 transition">Início</a>
+          <a href="#features" class="text-gray-300 hover:text-purple-400 transition">Recursos</a>
+          <a href="#plans" class="text-gray-300 hover:text-purple-400 transition">Assinatura</a>
+          <a href="#contact" class="text-gray-300 hover:text-purple-400 transition">Suporte</a>
+        </div>
+        <button class="md:hidden text-white">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-0">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1574375927938-d5a98e8efe85?q=80&w=2669&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0f0a1e] via-[#0f0a1e]/80 to-transparent"></div>
+
+      <div class="container mx-auto px-4 z-10 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          <div class="max-w-2xl py-10 lg:py-0">
+            <div class="inline-flex items-center bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-1.5 mb-8 shadow-lg">
+                <span class="relative flex h-2 w-2 mr-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                </span>
+                <span class="text-[10px] font-bold tracking-widest uppercase text-gray-300">Nova Tecnologia v4.0</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+              Streaming <br />
+              <span class="text-gradient">Redefinido.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl mb-10 text-gray-400 leading-relaxed max-w-lg">
+              Uma única assinatura, milhares de possibilidades. Centralize seu entretenimento com a máxima qualidade de imagem e som.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <a
+                href="#plans"
+                class="bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-full font-bold transition shadow-[0_0_20px_rgba(255,255,255,0.3)] flex justify-center items-center gap-2"
+              >
+                <i data-feather="play-circle" class="w-5 h-5"></i>
+                Começar Agora
+              </a>
+              <a
+                href="#features"
+                class="bg-transparent border border-white/20 hover:bg-white/5 text-white px-8 py-4 rounded-full font-medium transition backdrop-blur-sm flex justify-center items-center"
+              >
+                Conhecer Plataforma
+              </a>
+            </div>
+            
+            <div class="mt-12 flex items-center gap-4 text-sm text-gray-500 font-medium">
+               <div class="flex -space-x-3">
+                   <div class="w-10 h-10 rounded-full bg-gray-800 border-2 border-[#0f0a1e] flex items-center justify-center">👋</div>
+                   <div class="w-10 h-10 rounded-full bg-gray-700 border-2 border-[#0f0a1e] flex items-center justify-center">👍</div>
+                   <div class="w-10 h-10 rounded-full bg-gray-600 border-2 border-[#0f0a1e] flex items-center justify-center text-xs text-white">+2k</div>
+               </div>
+               <p>Junte-se à comunidade Quick+</p>
+            </div>
+          </div>
+
+          <div class="relative hidden lg:block h-[500px] w-full opacity-60 mask-image-gradient pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-l from-[#0f0a1e] z-20"></div>
+             <div class="grid grid-cols-2 gap-4 transform rotate-6 scale-90">
+                 <div class="space-y-4 animate-scroll-up">
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./lof.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./wandinha.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./st_.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./starwars.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./toystory.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                 </div>
+                 <div class="space-y-4 animate-scroll-down mt-12">
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./lacasadepapel.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./lucifer_Poster.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./lupin.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./piratas.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                    <div class="h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10"><img src="./thewitcher.jpg" class="w-full h-full object-cover opacity-75 grayscale"></div>
+                 </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-24 bg-[#0f0a1e] relative">
+      <div class="container mx-auto px-4 relative z-10">
+        
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+            Curadoria Inteligente
+          </h2>
+          <p class="text-xl text-gray-400">
+            Nossa plataforma agrega o melhor do conteúdo global em uma interface intuitiva e responsiva.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div>
+            <h3 class="text-2xl font-bold mb-8 flex items-center">
+              <span class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center mr-3 text-purple-400"><i data-feather="film" class="w-4 h-4"></i></span>
+              Biblioteca Premium
+            </h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-purple-500/30 transition flex items-center space-x-3 group">
+                <div class="w-2 h-2 rounded-full bg-red-500 group-hover:shadow-[0_0_10px_red]"></div>
+                <span class="font-medium text-gray-300 group-hover:text-white">Blockbusters</span>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-purple-500/30 transition flex items-center space-x-3 group">
+                <div class="w-2 h-2 rounded-full bg-blue-500 group-hover:shadow-[0_0_10px_blue]"></div>
+                <span class="font-medium text-gray-300 group-hover:text-white">Séries Exclusivas</span>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-purple-500/30 transition flex items-center space-x-3 group">
+                <div class="w-2 h-2 rounded-full bg-green-500 group-hover:shadow-[0_0_10px_green]"></div>
+                <span class="font-medium text-gray-300 group-hover:text-white">Esportes Ao Vivo</span>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-purple-500/30 transition flex items-center space-x-3 group">
+                <div class="w-2 h-2 rounded-full bg-yellow-500 group-hover:shadow-[0_0_10px_yellow]"></div>
+                <span class="font-medium text-gray-300 group-hover:text-white">Infantil & Family</span>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-purple-500/30 transition flex items-center space-x-3 group">
+                <div class="w-2 h-2 rounded-full bg-purple-500 group-hover:shadow-[0_0_10px_purple]"></div>
+                <span class="font-medium text-gray-300 group-hover:text-white">Documentários 4K</span>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-purple-500/30 transition flex items-center space-x-3 group">
+                <div class="w-2 h-2 rounded-full bg-white group-hover:shadow-[0_0_10px_white]"></div>
+                <span class="font-medium text-gray-300 group-hover:text-white">Notícias 24h</span>
+              </div>
+            </div>
+            <p class="mt-6 text-sm text-gray-500 font-mono">*Catálogo atualizado semanalmente.</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-8 flex items-center">
+              <span class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center mr-3 text-purple-400"><i data-feather="cpu" class="w-4 h-4"></i></span>
+              Especificações Técnicas
+            </h3>
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="mt-1 mr-4 text-green-400"><i data-feather="wifi" class="w-5 h-5"></i></div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg">Ultra Low Latency</h4>
+                        <p class="text-gray-400 text-sm mt-1">Nossa infraestrutura CDN garante transmissão em tempo real com buffer reduzido.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="mt-1 mr-4 text-green-400"><i data-feather="monitor" class="w-5 h-5"></i></div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg">Resolução Adaptativa</h4>
+                        <p class="text-gray-400 text-sm mt-1">Do HD ao 4K HDR, a qualidade se ajusta automaticamente à sua conexão.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="mt-1 mr-4 text-green-400"><i data-feather="shield" class="w-5 h-5"></i></div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg">Privacidade Garantida</h4>
+                        <p class="text-gray-400 text-sm mt-1">Seus dados são protegidos. Sem anúncios invasivos.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 border-y border-white/5 bg-black/20">
+      <div class="container mx-auto px-4">
+        <p class="text-center text-gray-500 text-sm mb-8 uppercase tracking-widest font-bold">Disponível em todas as plataformas</p>
+        <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+             <div class="flex items-center gap-2"><i data-feather="tv"></i> <span class="font-semibold">Smart TV</span></div>
+             <div class="flex items-center gap-2"><i data-feather="smartphone"></i> <span class="font-semibold">Mobile</span></div>
+             <div class="flex items-center gap-2"><i data-feather="monitor"></i> <span class="font-semibold">Desktop</span></div>
+             <div class="flex items-center gap-2"><i data-feather="cast"></i> <span class="font-semibold">Chromecast</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans" class="py-24 relative">
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Planos Flexíveis</h2>
+            <p class="text-gray-400">Escolha a melhor opção para o seu estilo de vida.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          
+          <div class="bg-[#1a1429] border border-white/5 rounded-3xl p-8 hover:border-purple-500/30 transition duration-300">
+            <h3 class="text-lg font-medium text-gray-300 mb-2">Individual</h3>
+            <div class="text-3xl font-bold mb-6 text-white">R$ 35 <span class="text-sm font-normal text-gray-500">/mês</span></div>
+            <ul class="space-y-4 mb-8 text-sm text-gray-300">
+              <li class="flex items-center"><i data-feather="check" class="text-purple-500 mr-2 w-4 h-4"></i> 1 Tela Simultânea</li>
+              <li class="flex items-center"><i data-feather="check" class="text-purple-500 mr-2 w-4 h-4"></i> Qualidade Full HD</li>
+              <li class="flex items-center"><i data-feather="check" class="text-purple-500 mr-2 w-4 h-4"></i> Suporte Standard</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=13955389492&text=Ola+Quick+Interesse+no+Individual" class="block w-full bg-white/5 hover:bg-white/10 text-center py-3 rounded-xl text-white font-medium transition">Selecionar</a>
+          </div>
+
+          <div class="bg-[#1a1429] border border-purple-500 rounded-3xl p-8 transform md:-translate-y-4 shadow-2xl shadow-purple-900/20 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-purple-600 text-[10px] font-bold px-3 py-1 rounded-bl-lg text-white">RECOMENDADO</div>
+            <h3 class="text-lg font-bold text-white mb-2">Família</h3>
+            <div class="text-3xl font-bold mb-6 text-white">R$ 60 <span class="text-sm font-normal text-gray-500">/mês</span></div>
+            <ul class="space-y-4 mb-8 text-sm text-white">
+              <li class="flex items-center"><i data-feather="check" class="text-green-400 mr-2 w-4 h-4"></i> 2 Telas Simultâneas</li>
+              <li class="flex items-center"><i data-feather="check" class="text-green-400 mr-2 w-4 h-4"></i> <strong>Qualidade 4K Ultra</strong></li>
+              <li class="flex items-center"><i data-feather="check" class="text-green-400 mr-2 w-4 h-4"></i> Suporte Prioritário</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=13955389492&text=Ola+Quick+Interesse+no+Familia" class="block w-full bg-purple-600 hover:bg-purple-700 text-center py-3 rounded-xl text-white font-bold transition">Assinar Agora</a>
+          </div>
+
+          <div class="bg-[#1a1429] border border-white/5 rounded-3xl p-8 hover:border-purple-500/30 transition duration-300">
+            <h3 class="text-lg font-medium text-gray-300 mb-2">Anual VIP</h3>
+            <div class="text-3xl font-bold mb-6 text-white">R$ 350 <span class="text-sm font-normal text-gray-500">/ano</span></div>
+            <ul class="space-y-4 mb-8 text-sm text-gray-300">
+              <li class="flex items-center"><i data-feather="check" class="text-purple-500 mr-2 w-4 h-4"></i> Economia de 2 meses</li>
+              <li class="flex items-center"><i data-feather="check" class="text-purple-500 mr-2 w-4 h-4"></i> Acesso Antecipado</li>
+              <li class="flex items-center"><i data-feather="check" class="text-purple-500 mr-2 w-4 h-4"></i> Suporte Prioritário</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=13955389492&text=Ola+Quick+Interesse+no+Anual" class="block w-full bg-white/5 hover:bg-white/10 text-center py-3 rounded-xl text-white font-medium transition">Selecionar</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 border-t border-white/5 bg-black/30">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-white">Suporte Especializado</h2>
+        <p class="text-xl mb-10 max-w-2xl mx-auto text-gray-400">
+          Dúvidas sobre a instalação ou planos? Nossa equipe técnica está pronta para ajudar.
+        </p>
+
+        <a
+          href="https://api.whatsapp.com/send?phone=13955389492&text=Ola+Quick+Preciso+de+ajuda"
+          class="inline-flex items-center bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-lg hover:shadow-green-900/50 transform hover:-translate-y-1"
+        >
+          <i data-feather="message-circle" class="mr-2"></i>
+          Falar com Atendente
+        </a>
+      </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-white/5">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <span class="text-2xl font-bold tracking-tighter text-white">
+                Quick<span class="text-purple-500">+</span>
+            </span>
+            <p class="text-gray-500 text-sm mt-2">Tecnologia de streaming simplificada.</p>
+          </div>
+          <div class="flex space-x-6 text-sm text-gray-500">
+              <a href="#" class="hover:text-white transition">Privacidade</a>
+              <a href="#" class="hover:text-white transition">Termos</a>
+              <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" class="hover:text-white transition">Contato</a>
+          </div>
+      </div>
+      <div class="text-center mt-8 text-xs text-gray-700">
+          &copy; 2025 Quick Plus Inc. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
